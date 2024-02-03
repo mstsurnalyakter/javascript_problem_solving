@@ -13,13 +13,20 @@ const makeNewString = str =>{
     if (str.length >= 3) {
         const first3Char = str.slice(0, 3);
         const last3Char = str.slice(str.length - 3);
-        const concatBoth = first3Char.concat(last3Char);
-        return concatBoth;
+        
+        return first3Char.concat(last3Char);
     }else{
         return str;
     }
 }
+
+// second process
+const makeNewString2 = str =>str.length < 3 ? str : str.slice(0, 3) + str.slice(-3);
+
+
 const str = "Surnaly";
 console.log(makeNewString(str));
 console.log(makeNewString("Mst"));
 console.log(makeNewString("Md"));
+
+console.log(makeNewString2("Surnaly"));
